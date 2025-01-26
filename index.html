@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGrow Spring Gardening Kit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1>Grow Your Spring Garden with EcoGrow</h1>
+            <p>Free of harmful chemicals, designed to thrive naturally!</p>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Gardening Kit Includes:</h2>
+        <div class="product-cards">
+            <div class="card">
+                <img src="seeds.jpg" alt="Seeds">
+                <h3>High-Quality Seeds</h3>
+                <ul>
+                    <li>Premium quality seeds for your garden</li>
+                    <li>Grow flowers, vegetables, or herbs</li>
+                </ul>
+                <button onclick="showModal('modal1')">View Details</button>
+            </div>
+            <div class="card">
+                <img src="tools.jpg" alt="Gardening Tools">
+                <h3>Durable Gardening Tools</h3>
+                <ul>
+                    <li>Essential tools for easy gardening</li>
+                    <li>Ergonomic and long-lasting</li>
+                </ul>
+                <button onclick="showModal('modal2')">View Details</button>
+            </div>
+            <div class="card">
+                <img src="soil.jpg" alt="Organic Soil">
+                <h3>Organic Soil</h3>
+                <ul>
+                    <li>Rich, organic compost</li>
+                    <li>Boosts plant health and growth</li>
+                </ul>
+                <button onclick="showModal('modal3')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="info">
+        <div class="info-card">
+            <h3>How to Order</h3>
+            <p>Simply select the items you need and place your order online.</p>
+        </div>
+        <div class="info-card">
+            <h3>Free Delivery</h3>
+            <p>Enjoy free delivery on all orders over $50, right to your door!</p>
+        </div>
+    </section>
+
+    <!-- Subscription Form -->
+    <section class="subscription">
+        <h2>Stay Updated</h2>
+        <p>Sign up to receive updates about our latest gardening kits and tips!</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Modals for Product Details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <button onclick="hideModal('modal1')">Close</button>
+            <h3>High-Quality Seeds</h3>
+            <p>Carefully selected seeds to ensure excellent growth and high yield.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <button onclick="hideModal('modal2')">Close</button>
+            <h3>Durable Gardening Tools</h3>
+            <p>Our tools are designed to make gardening easier and more enjoyable.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <button onclick="hideModal('modal3')">Close</button>
+            <h3>Organic Soil</h3>
+            <p>Rich in nutrients, our organic soil ensures optimal plant health.</p>
+        </div>
+    </div>
+
+    <script>
+        function showModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+
+        function hideModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
