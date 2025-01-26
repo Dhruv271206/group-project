@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #2c5d3f;
+}
+
+.banner {
+    background-image: url('https://media.istockphoto.com/id/1385759203/photo/soil-with-a-young-plant-planting-seedlings-in-the-ground-there-is-a-spatula-nearby-the.jpg?s=612x612&w=0&k=20&c=gmEFj5-5ZP8PnX74ostHb0G8hzUKSIKR_qxnjpBHHvg=');
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+}
+.products {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.info-card {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subscription {
+    text-align: center;
+    padding: 20px;
+}
+
+.subscription input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+.subscription button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+}
