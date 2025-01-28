@@ -52,12 +52,29 @@ body {
     background: rgba(255, 255, 255, 0.9);
 }
 
+.container {
+    display: flex;
+    justify-content: space-between; /* Evenly space divs horizontally */
+    align-items: stretch; /* Ensure the divs have equal height */
+    gap: 20px; /* Add spacing between the divs */
+  }
+  
 .info-card {
     text-align: center;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+
 }
+
+.info-card {
+    flex: 1; /* Allow divs to grow equally */
+    padding: 20px; /* Add some padding inside the divs */
+    text-align: center; /* Center align text */
+    border: 1px solid #ccc; /* Add a border for styling */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-color: #f9f9f9; /* Background color for clarity */
+  }
 
 .subscription {
     text-align: center;
