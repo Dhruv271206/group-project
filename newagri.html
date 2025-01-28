@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eco Grow - Landing Page</title>
+  
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -51,7 +55,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: url('https://www.pexels.com/photo/nature-green-grass-leaf-plant-1225018/') no-repeat center center/cover;
+      background: url('ecogrow.webp') no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 0 20px;
@@ -91,6 +95,7 @@
 
     .features-section,
     .best-sellers-section,
+    .about-us-section,
     .feedback-section {
       padding: 40px 20px;
       text-align: center;
@@ -99,6 +104,7 @@
 
     .features-section h2,
     .best-sellers-section h2,
+    .about-us-section h2,
     .feedback-section h2 {
       font-size: 2.5rem;
       color: #388E3C;
@@ -184,25 +190,85 @@
       color: #fff;
       cursor: pointer;
     }
+
+    .logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px; /* Space between logo and title */
+    display: inline-block;
+    vertical-align: middle;
+    }
+  
+    .left-header h1 {
+    margin: 0;
+    font-size: 24px;
+    vertical-align: middle;
+    }
+
+    .best-sellers-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+    }
+
+    .product button {
+      background-color: #388E3C;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .product button:hover {
+      background-color: #81C784;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Eco Grow</h1>
+    <h1><div class="left-header">
+        <img src="logo1.svg" alt="Logo" class="logo" />Eco Grow
+    
+    </div></h1>
     <nav>
       <a href="#">Home</a>
       <a href="#features">Features</a>
       <a href="#best-sellers">Best Sellers</a>
       <a href="#feedback">Feedback</a>
       <a href="#signup">Sign Up</a>
-      <a href="#cart">🛒</a>
-    </nav>
+      <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+    
   </header>
 
   <section class="landing-section">
     <div class="landing-text">
       <h2>Transform Your Garden with Eco Grow</h2>
-      <p>Discover premium gardening essentials for a sustainable and thriving garden. Let Eco Grow be your go-to garden companion.</p>
+      <p>Discover premium gardening essentials for a sustainable and thriving garden. Let Eco Grow be your go-to garden companion!!</p>
       <button class="cta-button" onclick="window.location.href='#best-sellers'">Shop Now</button>
     </div>
   </section>
@@ -231,26 +297,43 @@
   <section class="best-sellers-section" id="best-sellers">
     <h2>Best Sellers</h2>
     <div class="best-sellers-container">
-      <!-- Best Selling Products will go here -->
       <div class="product">
-        <img src="product1.jpg" alt="Product 1">
-        <h3>Product 1</h3>
-        <p>$10</p>
+        <img src="https://emi.parkview.com/media/Image/Dashboard_952_PlanterBox_03_19.jpg" alt="Product 1">
+        <h3>Basic Gardening Starter Kit</h3>
+        <P>🌱Includes: Small spade, trowel,bio-degredable pots, hand rake, coco-peat, pruner, gloves and care guide.<br>
+            🌱Ideal For: Small outdoor gardens, balconies, or pots.<br>
+            🌱 Example: Fiskars 4-piece Gardening Tool Set.</P>
+        <p><b>₹299</b></p>
         <button>Add to Cart</button>
       </div>
       <div class="product">
-        <img src="product2.jpg" alt="Product 2">
-        <h3>Product 2</h3>
-        <p>$15</p>
+        <img src="https://www.preen.com/media/duflqrh5/colorful-succulents.jpg?width=1200&height=630&bgcolor=white" alt="Product 2">
+        <h3>Succulent and Cactus Kit</h3>
+        <p>
+            🌱Includes: Succulent seeds, coco-peat, soil mix, bio-degredable pots,mini-watering can, tweezer and care guide.<br>
+            🌱Ideal For: Low-maintenance indoor plants.<br>
+            🌱Example: Craft’d Succulent Growing Kit.
+        </p>
+        <p><b>₹499</b></p>
         <button>Add to Cart</button>
       </div>
       <div class="product">
-        <img src="product3.jpg" alt="Product 3">
-        <h3>Product 3</h3>
-        <p>$20</p>
+        <img src="https://media.istockphoto.com/id/1415568863/photo/summer-flower-container-display-in-patio-container-gardening-ideas.jpg?s=612x612&w=0&k=20&c=KmB3q3halsB_Hxc9MWwqacGRtsfST6-6a5KseWBxmWI=" alt="Product 3">
+        <h3>Spring gardening kit</h3>
+        <p>
+            🌱Includes: Seed packets for spring-blooming flowers, biodegradable pots, soil pellets, and plant markers.<br>
+            🌱Ideal For: Starting colorful flower beds or planters.<br>
+            🌱Example: Nature’s Blossom Flower Garden Kit.
+        </p>
+        <p><b>₹999</b></p>
         <button>Add to Cart</button>
       </div>
     </div>
+  </section>
+
+  <section class="about-us-section" id="about-us">
+    <h2>About Us</h2>
+    <p>Eco Grow is dedicated to providing high-quality, sustainable gardening essentials. Our mission is to help you cultivate a thriving garden using eco-friendly products.</p>
   </section>
 
   <section class="feedback-section" id="feedback">
@@ -273,8 +356,10 @@
 
   <footer>
     <p>&copy; 2025 Eco Grow. All Rights Reserved.</p>
-    <input type="email" placeholder="Enter your email for updates">
-    <button>Subscribe</button>
+    <form>
+        <input type="email" placeholder="Enter your email" />
+        <button onclick="window.location.reload();">Subscribe</button>
+      </form>
   </footer>
 
   <div class="popup" id="popup">
