@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Grow - Landing Page</title>
+  
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #F1F8E9;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #388E3C;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #81C784;
+    }
+
+    .landing-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('ecogrow.webp') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .landing-text {
+      max-width: 600px;
+    }
+
+    .landing-text h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0 0 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .landing-text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-button {
+      background-color: #81C784;
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #388E3C;
+    }
+
+    .features-section,
+    .best-sellers-section,
+    .about-us-section,
+    .feedback-section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #FFF;
+    }
+
+    .features-section h2,
+    .best-sellers-section h2,
+    .about-us-section h2,
+    .feedback-section h2 {
+      font-size: 2.5rem;
+      color: #388E3C;
+      margin-bottom: 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #388E3C;
+      border-radius: 10px;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #2E7D32;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+      z-index: 1000;
+      text-align: center;
+      color: #fff;
+    }
+
+    .popup button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #388E3C;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background-color: #81C784;
+    }
+
+    footer {
+      background-color: #388E3C;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    footer input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    footer button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #81C784;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px; /* Space between logo and title */
+    display: inline-block;
+    vertical-align: middle;
+    }
+  
+    .left-header h1 {
+    margin: 0;
+    font-size: 24px;
+    vertical-align: middle;
+    }
+
+    .best-sellers-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+    }
+
+    .product button {
+      background-color: #388E3C;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .product button:hover {
+      background-color: #81C784;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><div class="left-header">
+        <img src="logo1.svg" alt="Logo" class="logo" />Eco Grow
+    
+    </div></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="#best-sellers">Best Sellers</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#signup">Sign Up</a>
+      <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+    
+  </header>
+
+  <section class="landing-section">
+    <div class="landing-text">
+      <h2>Transform Your Garden with Eco Grow</h2>
+      <p>Discover premium gardening essentials for a sustainable and thriving garden. Let Eco Grow be your go-to garden companion!!</p>
+      <button class="cta-button" onclick="window.location.href='#best-sellers'">Shop Now</button>
+    </div>
+  </section>
+
+  <section class="features-section" id="features">
+    <h2>Our Features</h2>
+    <div class="cards-container">
+      <div class="card" onclick="showPopup('Soil: Rich and Organic!')">
+        <img src="https://img.freepik.com/free-photo/growing-life-concept-with-flowers_23-2149243611.jpg?ga=GA1.1.612683004.1730213519&semt=ais_hybrid" alt="Soil">
+        <h3>Organic Soil</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+      </div>
+      <div class="card" onclick="showPopup('Seed: Best for Spring Gardens!')">
+        <img src="https://img.freepik.com/free-photo/legumes-arranged-circle-black-cement-floor_1150-20072.jpg?ga=GA1.1.612683004.1730213519&semt=ais_hybrid" alt="Seed">
+        <h3>Spring Seeds</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+      </div>
+      <div class="card" onclick="showPopup('Spring Kit: All-in-One!')">
+        <img src="https://img.freepik.com/free-photo/flat-lay-gardening-composition_23-2148128651.jpg?ga=GA1.1.612683004.1730213519&semt=ais_hybrid" alt="Spring Kit">
+        <h3>Spring Kit</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="best-sellers-section" id="best-sellers">
+    <h2>Best Sellers</h2>
+    <div class="best-sellers-container">
+      <div class="product">
+        <img src="https://emi.parkview.com/media/Image/Dashboard_952_PlanterBox_03_19.jpg" alt="Product 1">
+        <h3>Basic Gardening Starter Kit</h3>
+        <P>🌱Includes: Small spade, trowel,bio-degredable pots, hand rake, coco-peat, pruner, gloves and care guide.<br>
+            🌱Ideal For: Small outdoor gardens, balconies, or pots.<br>
+            🌱 Example: Fiskars 4-piece Gardening Tool Set.</P>
+        <p><b>₹299</b></p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://www.preen.com/media/duflqrh5/colorful-succulents.jpg?width=1200&height=630&bgcolor=white" alt="Product 2">
+        <h3>Succulent and Cactus Kit</h3>
+        <p>
+            🌱Includes: Succulent seeds, coco-peat, soil mix, bio-degredable pots,mini-watering can, tweezer and care guide.<br>
+            🌱Ideal For: Low-maintenance indoor plants.<br>
+            🌱Example: Craft’d Succulent Growing Kit.
+        </p>
+        <p><b>₹499</b></p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://media.istockphoto.com/id/1415568863/photo/summer-flower-container-display-in-patio-container-gardening-ideas.jpg?s=612x612&w=0&k=20&c=KmB3q3halsB_Hxc9MWwqacGRtsfST6-6a5KseWBxmWI=" alt="Product 3">
+        <h3>Spring gardening kit</h3>
+        <p>
+            🌱Includes: Seed packets for spring-blooming flowers, biodegradable pots, soil pellets, and plant markers.<br>
+            🌱Ideal For: Starting colorful flower beds or planters.<br>
+            🌱Example: Nature’s Blossom Flower Garden Kit.
+        </p>
+        <p><b>₹999</b></p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us-section" id="about-us">
+    <h2>About Us</h2>
+    <p>Eco Grow is dedicated to providing high-quality, sustainable gardening essentials. Our mission is to help you cultivate a thriving garden using eco-friendly products.</p>
+  </section>
+
+  <section class="feedback-section" id="feedback">
+    <h2>Customer Feedback</h2>
+    <div class="feedback-container">
+      <div class="feedback">
+        <p>"Eco Grow made my garden bloom like never before!"</p>
+        <h4>- Sarah L.</h4>
+      </div>
+      <div class="feedback">
+        <p>"Highly recommend their spring kit, everything you need in one place."</p>
+        <h4>- Mark D.</h4>
+      </div>
+      <div class="feedback">
+        <p>"My plants have never looked healthier. Amazing quality soil!"</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Eco Grow. All Rights Reserved.</p>
+    <form>
+        <input type="email" placeholder="Enter your email" />
+        <button onclick="window.location.reload();">Subscribe</button>
+      </form>
+  </footer>
+
+  <div class="popup" id="popup">
+    <p id="popup-text"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    function showPopup(message) {
+      document.getElementById('popup-text').innerText = message;
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
