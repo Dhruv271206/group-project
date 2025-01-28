@@ -4,23 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoGrow Spring Gardening Kit</title>
+    <style>
+    /* Change the color of the list items to black */
+    ul li {
+        color: black; /* Set text color to black */
+    }
+    button {
+    color: olive; /* Change the text color to red */
+}
+p {
+        color: black; /* Set text color to black */
+    }
+</style>
+</style>
+    <style>
+        .ecogrow {
+    color: rgb(10, 253, 10);
+}
+/* Add this CSS for the animation */
+.animated-paragraph {
+    opacity: 0;  /* Initially hidden */
+    animation: fadeIn 3s forwards;  /* Apply fade-in animation */
+    animation-delay: 2s;  /* Delay before starting the animation */
+    animation-iteration-count: infinite;  
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;  /* Start invisible */
+    }
+    100% {
+        opacity: 1;  /* End fully visible */
+    }
+    
+}
+
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header class="banner">
+    <!-- Header Section -->
+        <header class="banner">
         <div class="banner-content">
-            <h1>Grow Your Spring Garden with EcoGrow</h1>
-            <p>Free of harmful chemicals, designed to thrive naturally!</p>
+            <h1>Grow Your Spring Garden with <br><span class="ecogrow">EcoGrow</span></h1> 
+            <h2 class="animated-paragraph">Free of harmful chemicals, designed to thrive naturally!</h2>
+
         </div>
     </header>
+    
+>
 
     <!-- Products Section -->
     <section class="products">
+        <style>
+        /* Style for the h2 inside the .products section */
+.products h2 {
+    color: rgba(102, 34, 5, 0.947); /* Change text color to brown */
+    font-size: 2em; /* Adjust font size */
+    font-family: 'Arial', sans-serif; /* Set font style */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center the text */
+}
+     </style>
         <h2>Our Gardening Kit Includes:</h2>
         <div class="product-cards">
             <div class="card">
-                <img src="seeds.jpg" alt="Seeds">
+                <img src="https://img.freepik.com/premium-photo/different-vegetable-seeds-fertile-soil-flat-lay_495423-56044.jpg" alt="Seeds">
                 <h3>High-Quality Seeds</h3>
                 <ul>
                     <li>Premium quality seeds for your garden</li>
@@ -29,7 +80,7 @@
                 <button onclick="showModal('modal1')">View Details</button>
             </div>
             <div class="card">
-                <img src="tools.jpg" alt="Gardening Tools">
+                <img src="https://www.gardengatemagazine.com/review/wp-content/uploads/2022/10/Gardening-Tool-Set.jpg"  alt="Gardening Tools">
                 <h3>Durable Gardening Tools</h3>
                 <ul>
                     <li>Essential tools for easy gardening</li>
@@ -38,7 +89,7 @@
                 <button onclick="showModal('modal2')">View Details</button>
             </div>
             <div class="card">
-                <img src="soil.jpg" alt="Organic Soil">
+                <img src="https://www.westend61.de/images/0001403966pw/cropped-hands-holding-dirt-EYF08785.jpg"   alt="Organic Soil">
                 <h3>Organic Soil</h3>
                 <ul>
                     <li>Rich, organic compost</li>
@@ -74,7 +125,7 @@
     <!-- Modals for Product Details -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <button onclick="hideModal('modal1')">Close</button>
+            <button onclick="hideModal('modal1')">Exit</button>
             <h3>High-Quality Seeds</h3>
             <p>Carefully selected seeds to ensure excellent growth and high yield.</p>
         </div>
@@ -82,15 +133,15 @@
 
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <button onclick="hideModal('modal2')">Close</button>
+            <button onclick="hideModal('modal2')">Exit</button>
             <h3>Durable Gardening Tools</h3>
-            <p>Our tools are designed to make gardening easier and more enjoyable.</p>
+           <p>Our tools are designed to make gardening easier and more enjoyable.</p> 
         </div>
     </div>
 
     <div id="modal3" class="modal">
         <div class="modal-content">
-            <button onclick="hideModal('modal3')">Close</button>
+            <button onclick="hideModal('modal3')">Exit</button>
             <h3>Organic Soil</h3>
             <p>Rich in nutrients, our organic soil ensures optimal plant health.</p>
         </div>
