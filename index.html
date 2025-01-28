@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoGrow Spring Gardening Kit</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoGrow Spring Gardening Kit </title>
     <style>
     /* Change the color of the list items to black */
     ul li {
@@ -50,14 +50,35 @@ p {
         <div class="banner-content">
             <h1>Grow Your Spring Garden with <br><span class="ecogrow">EcoGrow</span></h1> 
             <h2 class="animated-paragraph">Free of harmful chemicals, designed to thrive naturally!</h2>
-
         </div>
+        <div class="right-header">
+          <nav class="navigation">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          <button class="subscribe-button">Subscribe</button>
+          <a href="#cart" class="cart-icon"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+        </div>
+      </div>
     </header>
     
 >
 
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Grow Your Spring Garden with EcoGrow</h1>
+        <p>Free of harmful chemicals, designed to thrive naturally!</p>
+      </div>
+    </section>
+
     <!-- Products Section -->
     <section class="products">
+
         <style>
         /* Style for the h2 inside the .products section */
 .products h2 {
@@ -98,63 +119,70 @@ p {
                 <button onclick="showModal('modal3')">View Details</button>
             </div>
         </div>
+      </div>
     </section>
 
     <!-- Additional Info Section -->
     <section class="info">
-        <div class="info-card">
-            <h3>How to Order</h3>
-            <p>Simply select the items you need and place your order online.</p>
-        </div>
-        <div class="info-card">
-            <h3>Free Delivery</h3>
-            <p>Enjoy free delivery on all orders over $50, right to your door!</p>
-        </div>
+      <div class="info-card">
+        <h3>How to Order</h3>
+        <p>Simply select the items you need and place your order online.</p>
+      </div>
+      <div class="info-card">
+        <h3>Free Delivery</h3>
+        <p>Enjoy free delivery on all orders over $50, right to your door!</p>
+      </div>
     </section>
 
     <!-- Subscription Form -->
     <section class="subscription">
-        <h2>Stay Updated</h2>
-        <p>Sign up to receive updates about our latest gardening kits and tips!</p>
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-        </form>
+      <h2>Stay Updated</h2>
+      <p>
+        Sign up to receive updates about our latest gardening kits and tips!
+      </p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
     </section>
 
     <!-- Modals for Product Details -->
     <div id="modal1" class="modal">
-        <div class="modal-content">
-            <button onclick="hideModal('modal1')">Exit</button>
-            <h3>High-Quality Seeds</h3>
-            <p>Carefully selected seeds to ensure excellent growth and high yield.</p>
-        </div>
+      <div class="modal-content">
+        <button onclick="hideModal('modal1')">Close</button>
+        <h3>High-Quality Seeds</h3>
+        <p>
+          Carefully selected seeds to ensure excellent growth and high yield.
+        </p>
+      </div>
     </div>
 
     <div id="modal2" class="modal">
-        <div class="modal-content">
-            <button onclick="hideModal('modal2')">Exit</button>
-            <h3>Durable Gardening Tools</h3>
-           <p>Our tools are designed to make gardening easier and more enjoyable.</p> 
-        </div>
+      <div class="modal-content">
+        <button onclick="hideModal('modal2')">Close</button>
+        <h3>Durable Gardening Tools</h3>
+        <p>
+          Our tools are designed to make gardening easier and more enjoyable.
+        </p>
+      </div>
     </div>
 
     <div id="modal3" class="modal">
-        <div class="modal-content">
-            <button onclick="hideModal('modal3')">Exit</button>
-            <h3>Organic Soil</h3>
-            <p>Rich in nutrients, our organic soil ensures optimal plant health.</p>
-        </div>
+      <div class="modal-content">
+        <button onclick="hideModal('modal3')">Close</button>
+        <h3>Organic Soil</h3>
+        <p>Rich in nutrients, our organic soil ensures optimal plant health.</p>
+      </div>
     </div>
 
     <script>
-        function showModal(id) {
-            document.getElementById(id).style.display = 'flex';
-        }
+      function showModal(id) {
+        document.getElementById(id).style.display = "flex";
+      }
 
-        function hideModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
+      function hideModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
